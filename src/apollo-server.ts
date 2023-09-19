@@ -12,8 +12,9 @@ import path from "path";
 import cors from "cors";
 import { json } from "body-parser";
 
-import { resolvers } from "./resolvers";
+import resolvers from "./resolvers";
 import db from "./db.json";
+import { DataContext } from "./resolvers/context";
 
 export interface MyContext {
   token?: string;
@@ -39,8 +40,8 @@ export async function CreateApolloServer(
     cors<cors.CorsRequest>(),
     json(),
     expressMiddleware(server, {
-      context: async ({ req }) => ({
-        token: req.headers.token,
+      context: async ({ req }): Promise<DataContext> => ({
+        token: req.headers.token as string,
         dataSources: { db },
       }),
     })
