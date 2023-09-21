@@ -1,6 +1,6 @@
 import { DataContext } from "./context";
 import Query from "./query";
-import { Resolvers } from "./resover-types.generated";
+import { Resolvers } from "./resolver-types.generated";
 
 const resolvers: Resolvers<DataContext> = {
   Query,

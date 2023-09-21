@@ -13,7 +13,7 @@ import cors from "cors";
 import { json } from "body-parser";
 
 import resolvers from "./resolvers";
-import db from "./db.json";
+import db from "../db.json";
 import { DataContext } from "./resolvers/context";
 
 export interface MyContext {

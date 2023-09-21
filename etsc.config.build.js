@@ -16,6 +16,7 @@ module.exports = {
     const cpy = (await import("cpy")).default;
     await cpy(
       [
+        "src/**/*.html", // Copy all .json files
         "src/**/*.json", // Copy all .json files
         "src/**/*.graphql", // Copy all .graphql files
         "!src/**/*.{tsx,ts,js,jsx}", // Ignore already built files

@@ -1,7 +1,7 @@
 {
   "watch": ["src"],
   "ignore": ["src/**/*.test.ts"],
-  "ext": "ts,mjs,js,json,graphql",
-  "exec": "etsc --config=etsc.config.build.js && node ./dist/index.js",
+  "ext": "tsx,ts,mjs,js,json,graphql",
+  "exec": "etsc --config=etsc.config.build.js && esbuild src/client/index.tsx --bundle --outfile=dist/server/public/bundle.js && node ./dist/server/index.js",
   "legacyWatch": true
 }

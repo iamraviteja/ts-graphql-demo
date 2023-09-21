@@ -1,5 +1,5 @@
 import { DataContext } from "./context";
-import { QueryResolvers } from "./resover-types.generated";
+import { QueryResolvers } from "./resolver-types.generated";
 
 const Query: QueryResolvers<DataContext> = {
   currentUser: () => {
